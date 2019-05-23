@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{894D663E-769F-4329-8AE4-BCA17C1A9D50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GYM</RootNamespace>
+    <AssemblyName>GYM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\bin\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DispDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DispDiario.Designer.cs">
+      <DependentUpon>DispDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegImp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegImp.Designer.cs">
+      <DependentUpon>RegImp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainImp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainImp.Designer.cs">
+      <DependentUpon>MainImp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMens.Designer.cs">
+      <DependentUpon>MainMens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main2.Designer.cs">
+      <DependentUpon>Main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegEst.Designer.cs">
+      <DependentUpon>RegEst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelEst.Designer.cs">
+      <DependentUpon>DelEst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainEst.Designer.cs">
+      <DependentUpon>MainEst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelEnt.Designer.cs">
+      <DependentUpon>DelEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainEnt.Designer.cs">
+      <DependentUpon>MainEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegEstEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegEstEnt.Designer.cs">
+      <DependentUpon>RegEstEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegEnt.Designer.cs">
+      <DependentUpon>RegEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DispDiario.resx">
+      <DependentUpon>DispDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegImp.resx">
+      <DependentUpon>RegImp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainImp.resx">
+      <DependentUpon>MainImp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMens.resx">
+      <DependentUpon>MainMens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegEstEnt.resx">
+      <DependentUpon>RegEstEnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main2.resx">
+      <DependentUpon>Main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegEst.resx">
+      <DependentUpon>RegEst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelEst.resx">
+      <DependentUpon>DelEst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainEst.resx">
+      <DependentUpon>MainEst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelEnt.resx">
+      <DependentUpon>DelEnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainEnt.resx">
+      <DependentUpon>MainEnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegEnt.resx">
+      <DependentUpon>RegEnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
