@@ -1,0 +1,91 @@
+CREATE TABLE Estudiante
+(
+  ID INT NOT NULL,
+  Nombre VARCHAR NOT NULL,
+  Apellido VARCHAR NOT NULL,
+  Semestre INT NOT NULL,
+  Carrera VARCHAR NOT NULL,
+  telefono INT NOT NULL,
+  Residencia VARCHAR NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Registro_Diario
+(
+  Fecha DATE NOT NULL,
+  Hora TIME NOT NULL,
+  Pago_diario INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ID) REFERENCES Estudiante(ID)
+);
+
+CREATE TABLE Registro_mensualidad
+(
+  Fecha_Inicial DATE NOT NULL,
+  Fecha_termino DATE NOT NULL,
+  Monto NUMERIC(5,2) NOT NULL,
+  ID_pago INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (ID_pago),
+  FOREIGN KEY (ID) REFERENCES Estudiante(ID)
+);
+
+CREATE TABLE Entrenador
+(
+  ID_entrenador INT NOT NULL,
+  Telefono INT NOT NULL,
+  Nombre VARCHAR NOT NULL,
+  Apellido VARCHAR NOT NULL,
+  Finicio DATE NOT NULL,
+  PRIMARY KEY (ID_entrenador)
+);
+
+CREATE TABLE Turnos
+(
+  Hora_inicio TIME NOT NULL,
+  Hora_termino TIME NOT NULL,
+  ID_entrenador INT NOT NULL,
+  PRIMARY KEY (ID_entrenador),
+  FOREIGN KEY (ID_entrenador) REFERENCES Entrenador(ID_entrenador)
+);
+
+CREATE TABLE Gimnasio
+(
+  Nombre VARCHAR NOT NULL,
+  ID_GYM VARCHAR NOT NULL,
+  ID_entrenador INT NOT NULL,
+  PRIMARY KEY (ID_GYM),
+  FOREIGN KEY (ID_entrenador) REFERENCES Entrenador(ID_entrenador)
+);
+
+CREATE TABLE Horarios
+(
+  Dia INT NOT NULL,
+  Hora_apertura TIME NOT NULL,
+  Hora_cierre TIME NOT NULL,
+  ID_GYM VARCHAR NOT NULL,
+  PRIMARY KEY (ID_GYM),
+  FOREIGN KEY (ID_GYM) REFERENCES Gimnasio(ID_GYM)
+);
+
+CREATE TABLE Equipamento
+(
+  Codigo INT NOT NULL,
+  Nombre VARCHAR NOT NULL,
+  Marca VARCHAR NOT NULL,
+  Estado VARCHAR NOT NULL,
+  Tipo VARCHAR NOT NULL,
+  ID_GYM VARCHAR NOT NULL,
+  PRIMARY KEY (Codigo, ID_GYM),
+  FOREIGN KEY (ID_GYM) REFERENCES Gimnasio(ID_GYM)
+);
+
+CREATE TABLE Entrena
+(
+  ID_entrenador INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (ID_entrenador),
+  FOREIGN KEY (ID_entrenador) REFERENCES Entrenador(ID_entrenador),
+  FOREIGN KEY (ID) REFERENCES Estudiante(ID)
+);
