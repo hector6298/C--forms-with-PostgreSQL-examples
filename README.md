@@ -7,3 +7,4 @@ List of Projects:
 - Gym Management System
 
 ![alt text](https://github.com/hector6298/C--forms-with-PostgreSQL-examples/blob/master/ERdiag.png)
+![alt text] (https://github.com/hector6298/C--forms-with-PostgreSQL-examples/blob/master/Schemas.png)
